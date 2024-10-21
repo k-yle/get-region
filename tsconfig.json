@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext", "dom"],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "outDir": "dist",
+    "types": [
+      "@vitest/browser/matchers",
+      "@vitest/browser/providers/playwright"
+    ],
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "declaration": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

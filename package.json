@@ -1,0 +1,39 @@
+{
+  "name": "get-region",
+  "version": "0.0.0",
+  "author": "Kyle Hensel",
+  "description": "🌐 Tiny package to get the user's country without calling any APIs (browser & nodejs)",
+  "license": "MIT",
+  "files": [
+    "CHANGELOG.md",
+    "dist"
+  ],
+  "keywords": [
+    "Intl",
+    "country",
+    "region",
+    "timezone"
+  ],
+  "repository": "https://github.com/k-yle/get-region",
+  "type": "module",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint .",
+    "build": "tsc && rm -rf dist/*.test.* && esbuild dist/*.js --outdir=dist --allow-overwrite --minify --sourcemap",
+    "test": "TZ=Pacific/Apia vitest",
+    "trypublish": "npm publish --provenance || true"
+  },
+  "devDependencies": {
+    "@vitest/browser": "^3.1.2",
+    "eslint": "^9.25.1",
+    "eslint-config-kyle": "^26.0.1",
+    "playwright": "^1.52.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "prettier": "eslint-config-kyle/prettier"
+}

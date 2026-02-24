@@ -21,7 +21,8 @@ const module = {
               String.fromCodePoint(65 + i) + String.fromCodePoint(65 + j);
 
             // the language code is irrelevant here
-            const locale = new Intl.Locale(`xx-${countryCode}`);
+            const locale = new Intl.Locale(`zxx-${countryCode}`);
+            if (locale.region !== countryCode) continue; // skip deprecated codes
 
             // @ts-expect-error -- fallback for nodejs and samsung internet
             const timezones = locale.timeZones || locale.getTimeZones() || [];

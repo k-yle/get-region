@@ -13,4 +13,9 @@ describe('node', () => {
   it('populates the timeZoneMap object', () => {
     expect(Object.keys(region.timeZoneMap).length).toBeGreaterThan(200);
   });
+
+  it('does not include deprecated codes', () => {
+    expect(region.timeZoneMap['Europe/Berlin']).toStrictEqual(['DE']); // no DD
+    expect(region.timeZoneMap['Europe/Moscow']).toStrictEqual(['RU']); // no SU
+  });
 });

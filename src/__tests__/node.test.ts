@@ -9,4 +9,8 @@ describe('node', () => {
   it('identifies the country', () => {
     expect(region.country).toStrictEqual(['WS']);
   });
+
+  it('populates the timeZoneMap object', () => {
+    expect(Object.keys(region.timeZoneMap).length).toBeGreaterThan(200);
+  });
 });

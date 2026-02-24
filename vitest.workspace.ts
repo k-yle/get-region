@@ -13,12 +13,13 @@ export default defineWorkspace([
       include: ['**/browser.*'],
       name: 'browser',
       browser: {
-        provider: 'playwright',
+        provider: 'webdriverio',
         enabled: true,
         instances: [
-          { browser: 'chromium' },
-          { browser: 'firefox' },
-          // { browser: 'webkit' }, // can't emulate a timezone
+          { browser: 'chrome' },
+          { browser: 'edge' },
+          // { browser: 'firefox' }, // Intl API not supported yet
+          // { browser: 'safari' }, // doesn't support headless mode
         ],
       },
     },

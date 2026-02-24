@@ -8,7 +8,7 @@
     "outDir": "dist",
     "types": [
       "@vitest/browser/matchers",
-      "@vitest/browser/providers/playwright"
+      "@vitest/browser/providers/webdriverio"
     ],
     "noUncheckedIndexedAccess": true,
     "noPropertyAccessFromIndexSignature": true,

@@ -36,7 +36,6 @@ jobs:
 
       - name: 🧪 Test
         run: |
-          npx playwright install
           npm test
 
       - name: 📦 Publish

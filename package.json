@@ -1,6 +1,6 @@
 {
   "name": "get-region",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Kyle Hensel",
   "description": "🌐 Tiny package to get the user's country without calling any APIs (browser & nodejs)",
   "license": "MIT",
